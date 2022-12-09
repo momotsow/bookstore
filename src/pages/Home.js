@@ -1,5 +1,7 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import InputBook from '../components/InputBook';
+import BookList from '../components/BookList';
 
 const HomePage = () => {
   const bookList = [
