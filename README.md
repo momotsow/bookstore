@@ -27,7 +27,7 @@ After you're finished please remove all the comments and instructions!
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Math Magicians</b></h3>
+  <h3><b>Bookstore</b></h3>
 
 </div>
 
@@ -36,7 +36,7 @@ After you're finished please remove all the comments and instructions!
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Javascript Capstone Project\] ](#-javascript-capstone-project-)
+- [📖 \[bookstore Project\] ](#-bookstore-project-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -60,11 +60,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Javascript Capstone Project] <a name="about-project"></a>
+# 📖 [bookstore Project] <a name="about-project"></a>
 
 > This is the first project of the Math Magicians application. 
 
-**[Javascript Capstone Project]** is a...
+**[bookstore Project]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
