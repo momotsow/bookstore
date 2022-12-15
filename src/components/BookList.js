@@ -1,22 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import BookItem from './BookItem';
+import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
+import Book from './BookItem';
+import Form from './Form';
 
-const BookList = ({ bookList }) => (
-  <ul>
-    {bookList.map((book) => (
-      <BookItem key={book.id} book={book} />
-    ))}
-  </ul>
-);
+function BookList() {
+  const books = useSelector((state) => state.books);
+  return (
+    <div>
+      {books.map((el, i) => (
+        <Book
+          key={uuidv4()}
+          index={i}
+          genre={el.genre}
+          title={el.title}
+          author={el.author}
+        />
+      ))}
+      <Form />
+    </div>
+  );
+}
 
-BookList.propTypes = {
-  bookList: PropTypes.arrayOf(
-    PropTypes.shape({
-      booktitle: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
 export default BookList;
