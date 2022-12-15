@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
@@ -15,10 +15,13 @@ function Book(props) {
       <h2>{title}</h2>
       <h3>{author}</h3>
       <button type="button">Comments</button>
-      <button type="button" onClick={async () => { 
-        setRemoving(true);
-        await dispatch(removeBook(itemid));
-      }}>
+      <button
+        type="button"
+        onClick={async () => {
+          setRemoving(true);
+          await dispatch(removeBook(itemid));
+        }}
+      >
         {removing ? 'Removing...' : 'Remove'}
       </button>
       <button type="button">Edit</button>
