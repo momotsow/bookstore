@@ -102,9 +102,9 @@ After you're finished please remove all the comments and instructions!
 ### Key Features <a name="key-features"></a>
 
 
-- **API network calls**
-- **Test**
-- **ES6 and Modularization**
+- **Single Page Application**
+- **Display books**
+- **Have book categories**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,7 +196,9 @@ npm test
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
--
+- **Add comments functionality**
+- **Style components**
+- **Add edit functionality**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

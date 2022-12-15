@@ -13,7 +13,10 @@ function Book(props) {
       <h4>{genre}</h4>
       <h2>{title}</h2>
       <h3>{author}</h3>
+      <button type="button">Comments</button>
       <button type="button" onClick={() => dispatch(removeBook(index))}>Remove</button>
+      <button type="button">Edit</button>
+
     </div>
   );
 }
