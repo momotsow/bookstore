@@ -1,50 +1,61 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
 function Form() {
+  const dispatch = useDispatch();
+
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [genre, setGenre] = useState('');
-  const handleTitleInput = (e) => {
+  const [category, setCategory] = useState('');
+
+  const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
 
-  const handleAuthorInput = (e) => {
+  const handleAuthorChange = (e) => {
     setAuthor(e.target.value);
   };
-
   const handleGenreChange = (e) => {
-    setGenre(e.target.value);
+    setCategory(e.target.value);
   };
 
-  const resetForm = () => {
+  const submitBookToStore = () => {
+    const newBook = {
+      item_id: uuidv4(),
+      title,
+      author,
+      category,
+    };
+    dispatch(addBook(newBook));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.target.children[1].children[0].value = null;
+    e.target.children[1].children[1].value = null;
     setTitle('');
     setAuthor('');
-    setGenre('');
   };
-  const dispatch = useDispatch();
-  return (
-    <form>
-      <input type="text" placeholder="Title" value={title} onChange={(e) => handleTitleInput(e)} />
-      <input type="text" placeholder="Author" value={author} onChange={(e) => handleAuthorInput(e)} />
-      <select value={genre} onChange={(e) => handleGenreChange(e)} placeholder="Genre">
-        <option value="">Select Genre</option>
-        <option value="Action">Action</option>
-        <option value="Economy">Economy</option>
-        <option value="Science Fiction">Science Fiction</option>
-      </select>
-      <button
-        type="button"
-        onClick={() => {
-          dispatch(addBook({ title, author, genre }));
-          resetForm();
-        }}
-      >
-        ADD BOOK
 
-      </button>
-    </form>
+  return (
+    <>
+      <form action="#" onSubmit={handleSubmit}>
+        <h2 className="add-span">ADD NEW BOOK</h2>
+        <div className="add-form d-flex">
+          <input className="input" type="text" placeholder="Book Title .." onChange={(e) => handleTitleChange(e)} />
+          <input className="input" placeholder="Author" onChange={(e) => handleAuthorChange(e)} />
+          <select className="selector" id="books" name="books" onChange={(e) => handleGenreChange(e)}>
+            <option value="Fiction">Fiction</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Romance">Romance</option>
+          </select>
+          <button type="button" onClick={(e) => submitBookToStore(e)}>ADD BOOK</button>
+        </div>
+      </form>
+    </>
   );
 }
 
