@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkStatus } from '../redux/categories/categories';
 
 function Categories() {
-  const status = useSelector((state) => state.categoriesReducers);
+  const status = useSelector((state) => state.categoriesReducer);
   const dispatch = useDispatch();
   return (
     <div>

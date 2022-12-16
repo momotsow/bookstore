@@ -1,7 +1,7 @@
 const CHECKSTATUS = 'book-store/categories/CHECK STATUS';
 const defaultState = 'Unknown status';
 
-export default function categoriesReducers(state = defaultState, action) {
+export default function categoriesReducer(state = defaultState, action) {
   switch (action.type) {
     case CHECKSTATUS:
       return 'Under construction';

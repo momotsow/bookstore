@@ -8,7 +8,7 @@ const defaultState = {
   books: [],
 };
 
-export default function booksReducer(state = defaultState, action) {
+export default function bookReducer(state = defaultState, action) {
   switch (action.type) {
     case ADDBOOK:
       return { ...state, books: [...state.books, action.book] };
