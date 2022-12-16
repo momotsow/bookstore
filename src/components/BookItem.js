@@ -11,9 +11,9 @@ function Book(props) {
   } = props;
   return (
     <div className="book">
-      <h4>{category}</h4>
-      <h2>{title}</h2>
-      <h3>{author}</h3>
+      <h4 className='book-category'>{category}</h4>
+      <h2 className='book-title'>{title}</h2>
+      <h3 className='book-author'>{author}</h3>
       <button type="button">Comments</button>
       <button
         type="button"
