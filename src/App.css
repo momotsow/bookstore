@@ -74,9 +74,3 @@ header li a {
   background-color: #fff;
 }
 
-.book,
-form {
-  border: solid 1px silver;
-  margin: 10px;
-  padding: 10px;
-}
