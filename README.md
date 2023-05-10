@@ -57,11 +57,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [bookstore Project] <a name="about-project"></a>
-
-> This is the last project of the Bookstore website. Now that all the functionality is done, you have to add styling. You will use Zeplin as a collaboration tool.
-
-**[bookstore Project]** is a...
+# 📖 bookstore <a name="about-project"></a>
 
 ## 🛠 Built With <a name="built-with"></a>
 
